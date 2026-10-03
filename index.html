@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cinevault — Browse TV Shows</title>
+  <meta name="description" content="Browse thousands of TV shows, cast, seasons and episodes.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="nav" id="nav">
+    <a class="logo" href="#/">CINE<span>VAULT</span></a>
+    <nav class="links">
+      <a href="#/" data-path="/">Home</a>
+      <a href="#/today" data-path="/today">Airing Today</a>
+      <a href="#/mylist" data-path="/mylist">My List</a>
+    </nav>
+    <div class="search">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <input id="searchInput" type="search" placeholder="Search shows…" autocomplete="off" aria-label="Search shows">
+    </div>
+  </header>
+
+  <main id="app"></main>
+
+  <div class="modal" id="modal" hidden>
+    <div class="modal-backdrop" data-action="close"></div>
+    <div class="modal-panel" role="dialog" aria-modal="true">
+      <button class="modal-close" data-action="close" aria-label="Close">×</button>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p>Show data and images provided by <a href="https://www.tvmaze.com" target="_blank" rel="noopener">TVmaze</a> (CC BY-SA). Cinevault is a browsing demo and does not host any video.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
